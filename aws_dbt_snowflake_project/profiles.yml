@@ -1,0 +1,37 @@
+aws_dbt_snowflake_project:
+  outputs:
+    dev:
+      account: LZMYDCS-CR75838
+      database: AIRBNB
+      password: RPnew@770987350
+      role: ACCOUNTADMIN
+      schema: dbt_schema
+      threads: 1
+      type: snowflake
+      user: MATRIXXEVO
+      warehouse: COMPUTE_WH
+  target: dev
+custom_postgres:
+  outputs:
+    dev:
+      dbname: destination_db
+      host: localhost
+      pass: secret
+      port: 5434
+      schema: public
+      threads: 1
+      type: postgres
+      user: postgres
+  target: dev
+custom_project:
+  outputs:
+    dev:
+      dbname: destination_db
+      host: localhost
+      pass: secret
+      port: 5434
+      schema: public
+      threads: 1
+      type: postgres
+      user: postgres
+  target: dev
